@@ -12,10 +12,7 @@ on:
     types: [published, created]
   # workflow_dispatch only registers workflows on the default branch; a push
   # trigger lets this run from the working branch too.
-  push:
-    paths:
-      - 'release/**'
-      - '.github/workflows/publish-apk.yml'
+  push: {}
 
 permissions:
   contents: write
