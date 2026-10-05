@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="indigo_900">#0B1020</color>
+    <color name="indigo_700">#1B1F3A</color>
+    <color name="indigo_500">#4F46E5</color>
+    <color name="violet_500">#7C3AED</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="surface_light">#FFFFFFFF</color>
+    <color name="surface_dark">#0B1020</color>
+    <color name="text_primary_light">#111827</color>
+    <color name="text_secondary_light">#4B5563</color>
+    <color name="text_primary_dark">#F9FAFB</color>
+    <color name="text_secondary_dark">#9CA3AF</color>
+</resources>

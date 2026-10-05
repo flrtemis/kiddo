@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher label. Change this one string to rename the app. -->
+    <string name="app_name">Kiddo</string>
+
+    <string name="error_offline_title">You\u2019re offline</string>
+    <string name="error_offline_message">Check your connection and try again.</string>
+    <string name="error_load_title">Couldn\u2019t load the page</string>
+    <string name="error_load_message">The page didn\u2019t respond. Try again in a moment.</string>
+    <string name="error_untrusted_title">Connection not secure</string>
+    <string name="error_untrusted_message">The certificate for this site could not be verified, so the page was not loaded.</string>
+    <string name="retry">Try again</string>
+    <string name="no_browser">No app on this device can open that link.</string>
+</resources>

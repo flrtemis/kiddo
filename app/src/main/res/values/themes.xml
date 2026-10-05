@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Platform theme only: the app has no AndroidX/AppCompat dependency, which keeps the
+         APK a single self-contained WebView shell. -->
+    <style name="Theme.Kiddo" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/surface_light</item>
+        <item name="android:colorBackground">@color/surface_light</item>
+        <item name="android:statusBarColor">@color/indigo_900</item>
+        <item name="android:navigationBarColor">@color/surface_light</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:colorAccent">@color/indigo_500</item>
+        <item name="android:progressTint">@color/indigo_500</item>
+        <item name="android:textColorPrimary">@color/text_primary_light</item>
+        <item name="android:textColorSecondary">@color/text_secondary_light</item>
+    </style>
+</resources>
