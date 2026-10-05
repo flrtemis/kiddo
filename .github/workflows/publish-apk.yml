@@ -1,0 +1,32 @@
+# Attaches the APK stored under release/ to a GitHub Release.
+#
+# Why this exists: the sandbox where the APK is built cannot reach
+# uploads.github.com, so the asset is committed to the repo and a GitHub
+# Actions runner (full network) performs the upload. It also makes future
+# releases one-click: bump release/*.apk, tag a release, done.
+name: publish-apk
+
+on:
+  workflow_dispatch: {}
+  release:
+    types: [published, created]
+
+permissions:
+  contents: write
+
+jobs:
+  attach-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Attach APK to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG="${{ github.event.release.tag_name }}"
+          [ -n "$TAG" ] || TAG="v1.0"
+          echo "Attaching APK(s) to release $TAG"
+          gh release upload "$TAG" release/*.apk --repo "$GITHUB_REPOSITORY" --clobber
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY"
